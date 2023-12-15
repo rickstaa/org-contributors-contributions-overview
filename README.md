@@ -17,7 +17,7 @@ This Python script fetches GitHub contributions data for both organization membe
    python main.py --org <organization name>
    ```
 
-Replace `<organization name>`` with the name of the GitHub organization you want to fetch contributions data for.
+Replace `<organization name>` with the name of the GitHub organization you want to fetch contributions data for.
 
 ## Output
 
