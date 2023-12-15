@@ -11,13 +11,9 @@ import requests
 # Read the GitHub access token from the environment variable.
 ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN")
 
-# Define the REST API endpoint URL for organization repositories
-ORG_REPOS_URL = f"https://api.github.com/orgs/{org_name}/repos"
-
 # Set up headers with your access token
 HEADERS = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
-    "Accept": "application/vnd.github.v3+json",  # Use GitHub API version 3
 }
 
 if __name__ == "__main__":
@@ -38,7 +34,9 @@ if __name__ == "__main__":
 
     # Make a GET request to fetch organization repositories.
     print(f"Fetching repositories in {org_name}...")
-    response = requests.get(ORG_REPOS_URL, headers=HEADERS)
+    response = requests.get(
+        f"https://api.github.com/orgs/{org_name}/repos", headers=HEADERS
+    )
 
     # Retrieve the repositories data if the request is successful.
     if response.status_code == 200:
