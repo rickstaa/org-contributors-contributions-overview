@@ -1,0 +1,7 @@
+# IDEs
+.vscode
+*.code-workspace
+
+# Data files
+open_source_contributions_overview.csv
+org_member_contributions_overview.csv
